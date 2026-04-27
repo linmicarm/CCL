@@ -27,9 +27,16 @@ What should only happen after the loop is done?
 
 const students = ["Alex", "Jordan", "Sam", "Taylor", "Morgan"];
 const scores = [92, 67, 45, 81, 73];
-let classAverage = 71.6;
 
-//Create a for loop to run through the students and scores arrays, and log the name, letter grade, and passing status for each student.
+let total = 0;
+let i = 0;
+
+while (i < scores.length) {
+  total += scores[i];
+  i++;
+}
+const classAverage = (total / scores.length)
+
 for (let i = 0; i < students.length; i++) {
   if (scores[i] >= 90) {
     console.log(`Name: ${students[i]}, Grade: A, Passing`);
@@ -43,7 +50,6 @@ for (let i = 0; i < students.length; i++) {
     console.log(`Name: ${students[i]}, Grade: F, Failing`);
   }
 }
-// Log the class average at the end of the loop.
 console.log(`Class Average: ${classAverage}`);
 
 /*
@@ -57,17 +63,16 @@ Top student: Alex with a score of 92
 Think about: What do I need to keep track of as the loop runs? How do I update my tracking variable when I find a higher score?
 */
 
-let i = 0;
+let n = 0;
 let highScore = scores[0];
 let topStudent = students[0];
 
-//Create a while loop to go through the scores array and track the highest score and the name of the student who got it.
-while (i < students.length) {
+while (n < students.length) {
   let currentScore = scores[i];
   if (currentScore > highScore) {
     highScore = currentScore;
     topStudent = students[i];
   }
-  i++;
+  n++;
 }
 console.log(`Top Student: ${topStudent}, with a score of ${highScore}`);

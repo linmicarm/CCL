@@ -63,16 +63,15 @@ Top student: Alex with a score of 92
 Think about: What do I need to keep track of as the loop runs? How do I update my tracking variable when I find a higher score?
 */
 
-let n = 0;
 let highScore = scores[0];
 let topStudent = students[0];
 
-while (n < students.length) {
+while (i < students.length) {
   let currentScore = scores[i];
   if (currentScore > highScore) {
     highScore = currentScore;
     topStudent = students[i];
   }
-  n++;
+  i++;
 }
 console.log(`Top Student: ${topStudent}, with a score of ${highScore}`);

@@ -12,8 +12,8 @@ const students = [
 ]
 
 students.forEach(function (student) {
-  let grade = 0
-
+  let grade
+  
   if (student.score >= 90) {
     grade = "A"
   } else if (student.score >= 80) {
